@@ -1,0 +1,11 @@
+version: '3.5'
+
+services:
+  shiny:
+    build:
+        context: .
+        dockerfile: Dockerfile
+    volumes:
+        - ./app:/srv/shiny-server
+    ports:
+        - "3838:3838"
